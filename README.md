@@ -36,7 +36,7 @@ io.printf("%d\n", $r.status);   # 200 with body "ok"; a bad webhook is 4xx, not 
 
 ## Requirements
 
-Jennifer 0.25.0 or newer and network access to `hooks.slack.com`. Posts need
+Jennifer 0.26.0 or newer and network access to `hooks.slack.com`. Posts need
 the default `jennifer` binary; the stock `jennifer-tiny` has no network driver.
 
 ## Development
