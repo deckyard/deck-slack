@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: LGPL-3.0-only
 # SPDX-FileCopyrightText: Copyright (C) 2026 mplx <mplx@jennifer-lang.dev>
-# pragma-jennifer-version: >=0.25.0
+# pragma-jennifer-version: >=0.26.0
 
 /**
  * White-box tests for slack: jennifer test src/slack_test.j
@@ -35,7 +35,7 @@ func answerOne(srv as httpd.Server) {
         method: httpd.method($req),
         path: httpd.path($req),
         contentType: httpd.header($req, "Content-Type"),
-        body: convert.stringFromBytes(httpd.body($req), "utf-8")
+        body: convert.stringFromBytes("utf-8", httpd.body($req))
     };
     if ($seen.path == "/webhook") {
         httpd.respond($req, 200, "ok");
