@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: LGPL-3.0-only
 # SPDX-FileCopyrightText: Copyright (C) 2026 mplx <mplx@jennifer-lang.dev>
-# pragma-jennifer-version: >=0.26.0
+# pragma-jennifer-version: >=0.27.0
 
 /**
  * White-box tests for slack: jennifer test src/slack_test.j
@@ -9,7 +9,7 @@
  * server on a loopback port, which answers one request like an Incoming
  * Webhook does and hands back what it received.
  */
-use convert;
+use encoding;
 use httpd;
 use task;
 use testing;
@@ -35,7 +35,7 @@ func answerOne(srv as httpd.Server) {
         method: httpd.method($req),
         path: httpd.path($req),
         contentType: httpd.header($req, "Content-Type"),
-        body: convert.stringFromBytes("utf-8", httpd.body($req))
+        body: encoding.decode("utf-8", httpd.body($req))
     };
     if ($seen.path == "/webhook") {
         httpd.respond($req, 200, "ok");
@@ -177,7 +177,7 @@ func testWebhookMustBeHttps() {
         "http://localhost@evil.example/x",
         ""
     ]) {
-        testing.assertThrowsWith("checkWebhook", [$url], "slack");
+        testing.assertThrowsArgs("checkWebhook", [$url], "slack");
     }
 }
 
@@ -195,5 +195,5 @@ func testWebhookAcceptsHttpsAndLoopback() {
 }
 
 func testSendRefusesPlainHttpBeforeSending() {
-    testing.assertThrowsWith("send", ["http://hooks.slack.com/services/T/B/x", "x"], "slack");
+    testing.assertThrowsArgs("send", ["http://hooks.slack.com/services/T/B/x", "x"], "slack");
 }
