@@ -4,8 +4,8 @@
 [![Documentation](https://img.shields.io/badge/docs-github%20pages-blue)](https://jennifer-language.github.io/deck-slack/)
 [![release](https://img.shields.io/github/v/release/jennifer-language/deck-slack)](https://github.com/jennifer-language/deck-slack/releases/latest)
 
-Posts messages to a Slack channel through an Incoming Webhook from a
-[Jennifer](https://jennifer-lang.dev/) program, as plain text or as Block Kit
+Posts messages to a Slack™ channel through an Incoming Webhook from a
+[Jennifer](https://jennifer-lang.dev/) program, as plain text or as Block Kit™
 blocks. Replaces the `slack` module of Jennifer's standard library (shipped
 since 0.18.0, deprecated from 0.26.0, removed in 0.28.0); the API is
 unchanged, only the import differs.
@@ -54,3 +54,11 @@ LGPL-3.0-only, see [LICENSE](LICENSE). Copyright (C) 2026 mplx &lt;mplx@jennifer
 
 `tools/check-headers.sh` checks every source file's SPDX header against
 `deck.toml`.
+
+## Trademarks
+
+Slack™ is a trademark of Slack Technologies, LLC. Block Kit™ and other product
+and company names may be trademarks of their respective owners. They are used
+only to identify the products this deck works with. This deck is an
+independent project, not affiliated with, sponsored or endorsed by Slack
+Technologies, LLC.

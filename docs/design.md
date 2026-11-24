@@ -5,8 +5,8 @@
 
 ## Scope
 
-The deck posts messages to a Slack channel through an Incoming Webhook:
-plain text with `send`, and rich messages built from Block Kit blocks
+The deck posts messages to a Slack™ channel through an Incoming Webhook:
+plain text with `send`, and rich messages built from Block Kit™ blocks
 (`header`, `section`, `fieldsSection`, `contextBlock`, `actionsBlock` with
 `button`, `divider`) starting from `message` and posted with `sendMessage`.
 `render` returns the JSON payload without sending it, and `escape` makes

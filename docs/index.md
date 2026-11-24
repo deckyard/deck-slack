@@ -3,7 +3,7 @@
 
 # @jennifer/slack
 
-Posts messages to a Slack channel through an
+Posts messages to a Slack™ channel through an
 [Incoming Webhook](https://api.slack.com/messaging/webhooks), using Jennifer's
 `http` module. The full API is on the [cheatsheet](cheatsheet.md).
 
@@ -103,3 +103,11 @@ import "@jennifer/slack/" as slack;   # after: jvc add @jennifer/slack
 
 Two things differ from the module: the deck adds `escape`, and it refuses a
 webhook URL that is not `https://`, which the module would have sent.
+
+## Trademarks
+
+Slack™ is a trademark of Slack Technologies, LLC. Block Kit™ and other product
+and company names may be trademarks of their respective owners. They are used
+only to identify the products this deck works with. This deck is an
+independent project, not affiliated with, sponsored or endorsed by Slack
+Technologies, LLC.
