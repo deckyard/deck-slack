@@ -1,7 +1,7 @@
-# Grimoire book configuration for the @jennifer/slack documentation.
+# Grimoire book configuration for the @deckyard/slack documentation.
 
 [book]
-title = "@jennifer/slack"
+title = "@deckyard/slack"
 description = "Post messages to Slack through an Incoming Webhook"
 language = "en"
 src = "docs"
@@ -20,10 +20,10 @@ navPosition = "left"
 tocPosition = "right"
 tocDepth = 3
 sectionNumbers = true
-titleUrl = "https://jennifer-language.github.io/deck-slack/"
-repoUrl = "https://github.com/jennifer-language/deck-slack"
+titleUrl = "https://deckyard.github.io/deck-slack/"
+repoUrl = "https://github.com/deckyard/deck-slack"
 repoLabel = "Source"
-editUrl = "https://github.com/jennifer-language/deck-slack/edit/main/docs/{path}"
+editUrl = "https://github.com/deckyard/deck-slack/edit/main/docs/{path}"
 
 [highlight]
 enabled = true

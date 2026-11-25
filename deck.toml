@@ -1,6 +1,6 @@
 [package]
-name = "@jennifer/slack"
-version = "0.2.0-dev"
+name = "@deckyard/slack"
+version = "0.2.0"
 description = "Post messages to Slack through an Incoming Webhook"
 license = "LGPL-3.0-only"
 authors = ["mplx <mplx@jennifer-lang.dev>"]
@@ -8,9 +8,9 @@ capabilities = ["net"]
 keywords = ["slack", "notifications", "webhook", "block-kit"]
 
 [package.urls]
-deck = "https://raw.githubusercontent.com/jennifer-language/deck-slack/main/deck.toml"
-homepage = "https://github.com/jennifer-language/deck-slack"
-manual = "https://jennifer-language.github.io/deck-slack/"
+deck = "https://raw.githubusercontent.com/deckyard/deck-slack/main/deck.toml"
+homepage = "https://github.com/deckyard/deck-slack"
+manual = "https://deckyard.github.io/deck-slack/"
 
 [engines]
 jennifer = ">=0.27.0"

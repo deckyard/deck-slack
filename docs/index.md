@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: LGPL-3.0-only -->
 <!-- SPDX-FileCopyrightText: Copyright (C) 2026 mplx <mplx@jennifer-lang.dev> -->
 
-# @jennifer/slack
+# @deckyard/slack
 
 Posts messages to a Slack™ channel through an
 [Incoming Webhook](https://api.slack.com/messaging/webhooks), using Jennifer's
@@ -12,7 +12,7 @@ Posts messages to a Slack™ channel through an
 Snippets assume these imports:
 
 ```jennifer
-import "@jennifer/slack/" as slack;
+import "@deckyard/slack/" as slack;
 import "http.j" as http;
 ```
 
@@ -88,6 +88,15 @@ Needs `net`, so it runs on the default `jennifer` binary. The stock
 `jennifer-tiny` has no network driver and every post throws; building and
 rendering messages works on both.
 
+## Moving from `@jennifer/slack`
+
+Up to 0.1.0 this deck was `@jennifer/slack`. Change the `[decks]` entry to
+`"@deckyard/slack" = "^0.2.0"` and the imports:
+
+```jennifer
+import "@deckyard/slack/" as slack;
+```
+
 ## Moving from the standard library module
 
 Jennifer has shipped `slack` as a standard library module (`modules/slack.j`)
@@ -98,7 +107,7 @@ import changes:
 
 ```jennifer
 import "slack.j" as slack;            # before
-import "@jennifer/slack/" as slack;   # after: jvc add @jennifer/slack
+import "@deckyard/slack/" as slack;   # after: jvc add @deckyard/slack
 ```
 
 Two things differ from the module: the deck adds `escape`, and it refuses a

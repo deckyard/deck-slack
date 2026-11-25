@@ -24,9 +24,7 @@ $m = slack.header($m, "Deploy");
 $m = slack.section($m, "*build 1234* is live in _production_");
 $m = slack.fieldsSection($m, ["*Env:*\nprod", "*Build:*\n1234"]);
 $m = slack.divider($m);
-$m = slack.actionsBlock(
-    $m,
-    [slack.button("Docs", "https://jennifer-language.github.io/deck-slack/")]);
+$m = slack.actionsBlock($m, [slack.button("Docs", "https://deckyard.github.io/deck-slack/")]);
 
 io.printf("plain:  %s\n", slack.render(slack.text(slack.message(), "hello")));
 io.printf("blocks: %s\n", slack.render($m));
@@ -35,7 +33,7 @@ if (len($url) == 0) {
     io.printf("set SLACK_WEBHOOK_URL to post the messages\n");
 } else {
     try {
-        def r as http.Response init slack.send($url, "Hello from @jennifer/slack");
+        def r as http.Response init slack.send($url, "Hello from @deckyard/slack");
         io.printf("send -> %d %s\n", $r.status, $r.body);
         def b as http.Response init slack.sendMessage($url, $m);
         io.printf("sendMessage -> %d %s\n", $b.status, $b.body);

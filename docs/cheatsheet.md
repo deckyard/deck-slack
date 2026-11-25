@@ -3,11 +3,11 @@
 
 # slack cheatsheet
 
-Every export of `@jennifer/slack`. Background is in
+Every export of `@deckyard/slack`. Background is in
 [the introduction](index.md).
 
 ```jennifer
-import "@jennifer/slack/" as slack;
+import "@deckyard/slack/" as slack;
 import "http.j" as http;
 ```
 
